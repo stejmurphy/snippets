@@ -19,9 +19,10 @@ while(true)
 	// Inner Loop - testing with each possible divisor from 1 to 500.
 	while(true)
 	{
-		// if it finds a divisor that is not prime it will stop and try the next one number
+		// if (testdiv) is greater than the square root of (to_test)
 		if ($testdiv > sqrt($to_test))
 		{
+			//print the number
 			print "$to_test ";
 			break;
 		}
