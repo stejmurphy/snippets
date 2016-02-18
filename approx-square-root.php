@@ -25,12 +25,20 @@ $precision = 0.0000001; //double
 // 1.0 * 1.0
 $guess_squared = $guess * $guess;
 
-//1.0 - 81 > 0.0000001
-while(($guess_squared - $target  > $precision) or (
-	
-	))
+//1.0 - 81 > 0.0000001 or 1.0 - 81 < - 0.0000001
+while (($guess_squared - $target  > $precision) or ($guess_squared - $target < - $precision))
+	{
+		// print out
+		print("Current guess: $guess is the square root of $target<br>");
+		// first loop
+		//81 / 1.0 = 81 + 1.0 = 82.0 / 2 = 41 (guess)
+		$guess = ($guess + ($target / $guess)) / 2;
+		// 41 * 41 = 1681 ($guess_squared)
+		$guess_squared =  $guess * $guess;
 
-
+		//loop back and print Current Guess: 41(guess) us the square root of 81(target)
+	}
+print ("$guess squared = $guess_squared<br>");
 ?>
 </body>
 </html>
