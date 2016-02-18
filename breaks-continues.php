@@ -10,7 +10,6 @@ for ($x = 1; $x <10; $x++)
 	//this will never run because 1 is odd
 }
 
-
 for ($x = 1; $x <10; $x++)
 {
 	// if $x is odd skip this loop
