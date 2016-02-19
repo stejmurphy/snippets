@@ -23,5 +23,6 @@ try{// title, keywords, description
 catch (Exception $e)
 {
 	echo($e->getMessage());
+	//header("location: https://stackoverflow.com/search?q=[php]".$e->getMessage());
 }
 die();
