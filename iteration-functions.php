@@ -22,3 +22,21 @@ function city_by_number ($number_index, $city_array){
 city_by_number(0, $my_major_city_info);
 city_by_number(1, $my_major_city_info);
 city_by_number(2, $my_major_city_info);
+
+
+//each example
+
+
+function print_keys_and_values_each($city_array)
+{
+    reset($city_array);
+    while($array_cell = each($city_array))
+    {
+        $current_value = $array_cell['value']; //case sensitive
+        $current_key = $array_cell['key']; //case sensitive
+
+        print("Key: $current_key ; Value: $current_value ;<br>");
+    }
+}
+
+print_keys_and_values_each($my_major_city_info);
