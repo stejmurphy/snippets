@@ -1,7 +1,7 @@
 <?php
 
 $my_major_city_info = array();
-$my_major_city_info[0] = 'Carcas';
+$my_major_city_info[0] = 'Caracas';
 $my_major_city_info['Carcas']= 'Venezuela';
 $my_major_city_info[1] = 'Paris';
 $my_major_city_info['Paris'] = 'France';
@@ -40,3 +40,12 @@ function print_keys_and_values_each($city_array)
 }
 
 print_keys_and_values_each($my_major_city_info);
+
+
+function print_value_length($array_value, $array_key_ignored)
+{
+    $the_length = strlen($array_value);
+    print("The length of the $array_value is the $the_length<br>");
+}
+
+array_walk($my_major_city_info, print_value_length);
