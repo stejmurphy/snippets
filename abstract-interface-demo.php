@@ -1,4 +1,5 @@
 <?php
+
 abstract class Mammal {
     protected $age_;
     //below are functions I think all mammals will have,including people
