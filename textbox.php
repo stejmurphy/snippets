@@ -18,3 +18,42 @@ class TextBoxSimple{
 $body = new TextBoxSimple('Custom Text');
 //load method aka display the table
 $body->display();
+
+
+///Inheritance
+
+class TextBoxHeader extends TextBoxSimple{
+
+    var $header_text;
+
+    //constructor
+    function __construct($header_text_in, $body_text_in){
+
+        $this->header_text = $header_text_in;
+        $this->body_text = $body_text_in;
+    }
+
+    // Main display function
+    function display(){
+        $header_html = $this->make_header($this->header_text);
+        $body_html   = $this->make_body($this->body_text);
+
+        print("<table border=1><tr><td>$header_html</td></tr><tr><td>$body_html</td></tr></table>");
+    }
+
+    //Header functions
+    function make_header($text){
+        return $text;
+
+    }
+
+    //body
+    function make_body($text){
+        return($text);
+    }
+
+
+}
+
+$box = new TextBoxHeader('Custom Header Text', 'Custom Body Text');
+$box->display();
