@@ -31,8 +31,6 @@ foreach($person as $attribute => $data){
     $attr_nice = ucwords(str_replace("_", " ", $attribute));
     echo "{$attr_nice}: {$data}<br />";
 }
-
-
 ?>
 </body>
 </html>
